@@ -14,7 +14,7 @@ export const useAddTask = () => {
       return createdTask
     },
     onSuccess: (createdTask) => {
-      queryClient.setQueryData(taskQueryKeys.getAll(), (oldTasks) => [
+      queryClient.setQueryData(taskQueryKeys.getAll(), (oldTasks = []) => [
         ...oldTasks,
         createdTask,
       ])

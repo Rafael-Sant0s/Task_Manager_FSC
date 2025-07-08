@@ -50,8 +50,8 @@ const AddTaskDialog = ({ isOpen, handleClose }) => {
           })
           toast.success("Tarefa adicionada com sucesso!")
         },
-        onError: () => {
-          console.error("Erro ao adicionar tarefa:", errors)
+        onError: (error) => {
+          console.error("Erro ao adicionar tarefa:", error)
           toast.error("Erro ao adicionar tarefa. Por favor, tente novamente.")
         },
       }
